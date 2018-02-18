@@ -17,7 +17,7 @@ contract LotteryManager is mortal{
     uint256 amount;
     uint256 participants;
 
-    mapping(uint256 => LotteryRequest)all_requests;
+    mapping(address => LotteryRequest)all_requests;
 
 
     function requsetLotteryTicket (address _to, uint256 _value, string _reason) public returns(address) {
@@ -27,6 +27,11 @@ contract LotteryManager is mortal{
     function pickWinner () returns(address) {
 
     }
+
+    function transferWinnings () returns(bool res) {
+
+    }
+
 
     function setParticipants (uint256 _participants) returns(bool res) {
 
